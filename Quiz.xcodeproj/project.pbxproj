@@ -297,6 +297,7 @@
 				E3A767A61DBDD7FC0085D0DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
