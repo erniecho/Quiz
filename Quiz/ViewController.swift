@@ -43,6 +43,20 @@ class ViewController: UIViewController {
         
     }
     
+    func animatedLabelTransitions() {
+        let animationClosure = { () -> Void in
+            self.questionLabel.alpha = 1
+        }
+        // Animate the alpha
+        UIView.animate(withDuration: 0.5, animations: animationClosure)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Set the label's initial alpha
+        questionLabel.alpha = 0
+    }
 
 }
 
