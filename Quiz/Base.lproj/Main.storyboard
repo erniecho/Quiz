@@ -40,27 +40,35 @@
                                     <action selector="showAnswerWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uCK-uo-55U"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-kU-Lfu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ufU-aU-qCf" firstAttribute="top" secondItem="e0V-6P-qxF" secondAttribute="bottom" constant="50" id="25K-Nk-hVy"/>
+                            <constraint firstItem="HEs-kU-Lfu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="13G-CA-pst"/>
                             <constraint firstItem="DSu-Dr-lpy" firstAttribute="centerX" secondItem="ufU-aU-qCf" secondAttribute="centerX" id="3N0-VS-4fB"/>
-                            <constraint firstItem="e0V-6P-qxF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="Fev-hS-li8"/>
-                            <constraint firstItem="g12-RU-g1P" firstAttribute="top" secondItem="DSu-Dr-lpy" secondAttribute="bottom" constant="50" id="Tf7-Hw-XCl"/>
+                            <constraint firstItem="e0V-6P-qxF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Fev-hS-li8"/>
+                            <constraint firstItem="ufU-aU-qCf" firstAttribute="top" secondItem="HEs-kU-Lfu" secondAttribute="bottom" constant="20" id="JaI-df-snx"/>
+                            <constraint firstItem="g12-RU-g1P" firstAttribute="top" secondItem="DSu-Dr-lpy" secondAttribute="bottom" constant="20" id="Tf7-Hw-XCl"/>
                             <constraint firstItem="e0V-6P-qxF" firstAttribute="centerX" secondItem="ufU-aU-qCf" secondAttribute="centerX" id="VxI-BO-hyS"/>
-                            <constraint firstItem="DSu-Dr-lpy" firstAttribute="top" secondItem="ufU-aU-qCf" secondAttribute="bottom" constant="50" id="XMt-Nb-Rmj"/>
+                            <constraint firstItem="DSu-Dr-lpy" firstAttribute="top" secondItem="ufU-aU-qCf" secondAttribute="bottom" constant="20" id="XMt-Nb-Rmj"/>
                             <constraint firstItem="g12-RU-g1P" firstAttribute="centerX" secondItem="ufU-aU-qCf" secondAttribute="centerX" id="vEO-KS-yTF"/>
+                            <constraint firstItem="HEs-kU-Lfu" firstAttribute="top" secondItem="e0V-6P-qxF" secondAttribute="bottom" constant="20" id="xE8-nf-uir"/>
                             <constraint firstItem="e0V-6P-qxF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yPB-Am-8br"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="DSu-Dr-lpy" id="Fut-Pu-Vrg"/>
-                        <outlet property="questionLabel" destination="e0V-6P-qxF" id="yGJ-rd-P7f"/>
+                        <outlet property="currentQuestionLabel" destination="e0V-6P-qxF" id="1SE-fd-iYp"/>
+                        <outlet property="nextQuestionLabel" destination="HEs-kU-Lfu" id="hHL-e9-IpT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176.81159420289856" y="225.00000000000003"/>
+            <point key="canvasLocation" x="171" y="210"/>
         </scene>
     </scenes>
 </document>

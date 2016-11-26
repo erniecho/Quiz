@@ -9,9 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var questionLabel: UILabel!
+    
+    // Declare label variables.
+    
+    @IBOutlet var currentQuestionLabel: UILabel!
+    @IBOutlet var nextQuestionLabel: UILabel!
+    
     @IBOutlet var answerLabel: UILabel!
+    
+   
     
     let questions: [String] = ["From what is cognac made?",
                                "What is 7+7?",
@@ -23,9 +29,11 @@ class ViewController: UIViewController {
     
     var currentQuestionIndex: Int = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = questions[currentQuestionIndex]
+        let question = questions[currentQuestionIndex]
+        currentQuestionLabel.text = question
     }
 
     @IBAction func showNextQuestion(sender: AnyObject) {
@@ -34,8 +42,11 @@ class ViewController: UIViewController {
         currentQuestionIndex = 0
         }
         let question: String = questions[currentQuestionIndex]
-        questionLabel.text = question
+        nextQuestionLabel.text = question
         answerLabel.text = "???"
+        
+        // call the animated graphics function.
+        animatedLabelTransitions()
     }
     @IBAction func showAnswer(sender: AnyObject) {
         let answer: String = answers[currentQuestionIndex]
@@ -44,18 +55,21 @@ class ViewController: UIViewController {
     }
     
     func animatedLabelTransitions() {
-        let animationClosure = { () -> Void in
-            self.questionLabel.alpha = 1
-        }
+        
         // Animate the alpha
-        UIView.animate(withDuration: 0.5, animations: animationClosure)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.currentQuestionLabel.alpha = 0
+            self.nextQuestionLabel.alpha = 1
+        
+        })
     }
     
+    //modify
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //Set the label's initial alpha
-        questionLabel.alpha = 0
+        nextQuestionLabel.alpha = 0
     }
 
 }
