@@ -32,8 +32,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let question = questions[currentQuestionIndex]
-        currentQuestionLabel.text = question
+        currentQuestionLabel.text = questions[currentQuestionIndex]
     }
 
     @IBAction func showNextQuestion(sender: AnyObject) {
