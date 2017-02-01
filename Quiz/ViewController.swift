@@ -63,6 +63,8 @@ class ViewController: UIViewController {
     }
     
     func animatedLabelTransitions() {
+        // Force any outstanding layout changes to occur
+        view.layoutIfNeeded()
         
         // Animate the alpha with Completion from page 149.
         // and the center X constraints
@@ -72,7 +74,7 @@ class ViewController: UIViewController {
         
         UIView.animate(withDuration: 0.5,
                        delay: 0,
-                       options: [],
+                       options: [.curveLinear],
                        animations: {
                         self.currentQuestionLabel.alpha = 0
                         self.nextQuestionLabel.alpha = 1
