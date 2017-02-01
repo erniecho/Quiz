@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var answerLabel: UILabel!
     
+    @IBOutlet var currentQuestionLabelCenterXConstraint: NSLayoutConstraint!
+    @IBOutlet var nextQuestionLabelCenterXConstraint: NSLayoutConstraint!
    
     
     let questions: [String] = ["From what is cognac made?",
@@ -55,11 +57,17 @@ class ViewController: UIViewController {
     
     func animatedLabelTransitions() {
         
-        // Animate the alpha
-        UIView.animate(withDuration: 0.5, animations: {
-            self.currentQuestionLabel.alpha = 0
-            self.nextQuestionLabel.alpha = 1
-        
+        // Animate the alpha with Completion from page 149.
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       options: [],
+                       animations: {
+                        self.currentQuestionLabel.alpha = 0
+                        self.nextQuestionLabel.alpha = 1
+        },
+                       completion: { _ in
+                        swap(&self.currentQuestionLabel,
+                             &self.nextQuestionLabel)
         })
     }
     
